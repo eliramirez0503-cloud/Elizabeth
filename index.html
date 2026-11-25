@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi trayectoria formativa | Ramírez Elizabeth</title>
+<meta name="description" content="Trayectoria formativa de Ramírez Elizabeth, Profesorado de Educación Secundaria en Lengua y Literatura, cohorte 2023-2026.">
+<style>
+  :root{
+    --verde:#1f6b4a;
+    --verde-osc:#14472f;
+    --verde-cl:#e6f2ec;
+    --negro:#161616;
+    --texto:#2a2a2a;
+    --suave:#6a6a6a;
+    --fondo:#fafaf7;
+    --tarjeta:#ffffff;
+    --rojo:#b3202a;
+    --borde:#e3e3dc;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;font-family:Georgia,"Times New Roman",serif;
+    color:var(--texto);background:var(--fondo);line-height:1.75;font-size:1.05rem;
+  }
+  h1,h2,h3,nav,.etiqueta,button{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--verde)}
+
+  /* Navegación */
+  nav{
+    position:sticky;top:0;z-index:10;background:var(--negro);
+    display:flex;gap:.25rem;justify-content:center;flex-wrap:wrap;padding:.6rem 1rem;
+    border-bottom:3px solid var(--verde);
+  }
+  nav a{
+    color:#fff;text-decoration:none;font-size:.9rem;padding:.35rem .8rem;border-radius:999px;
+    transition:background .2s;
+  }
+  nav a:hover,nav a:focus{background:var(--verde);outline:none}
+
+  /* Portada */
+  header{
+    background:linear-gradient(135deg,var(--negro) 0%,var(--verde-osc) 100%);
+    color:#fff;text-align:center;padding:4.5rem 1.5rem 4rem;
+  }
+  header .etiqueta{
+    display:inline-block;letter-spacing:.15em;text-transform:uppercase;font-size:.78rem;
+    border:1px solid rgba(255,255,255,.4);padding:.3rem .9rem;border-radius:999px;margin-bottom:1.4rem;
+  }
+  header h1{font-size:clamp(2rem,6vw,3.4rem);margin:.2rem 0 .6rem;line-height:1.15}
+  header p{margin:.2rem 0;color:#d9e8df}
+  header .estudiante{font-size:1.25rem;color:#fff;margin-top:1.2rem;font-weight:600}
+  .acento{display:block;width:70px;height:4px;background:var(--rojo);margin:1.6rem auto 0;border-radius:2px}
+
+  main{max-width:860px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+  section{margin-bottom:3.2rem;scroll-margin-top:4.5rem}
+
+  /* Eli */
+  .eli{
+    background:var(--tarjeta);border:1px solid var(--borde);border-left:6px solid var(--verde);
+    border-radius:10px;padding:1.5rem 1.6rem;box-shadow:0 2px 10px rgba(0,0,0,.04);
+  }
+  .eli h2{margin-top:0;color:var(--verde-osc);font-size:1.3rem}
+  .eli .saludo{font-style:italic;font-size:1.1rem;margin:1rem 0 0}
+  .eli ul{padding-left:1.1rem;margin:.6rem 0}
+  .eli li{margin:.3rem 0}
+
+  button.escuchar{
+    margin-top:1rem;background:var(--verde);color:#fff;border:0;border-radius:8px;
+    padding:.6rem 1.1rem;font-size:.95rem;cursor:pointer;transition:background .2s;
+  }
+  button.escuchar:hover{background:var(--verde-osc)}
+  button.escuchar[aria-pressed="true"]{background:var(--rojo)}
+
+  /* Línea de tiempo */
+  .linea{position:relative;margin-top:1rem;padding-left:2.2rem}
+  .linea::before{
+    content:"";position:absolute;left:.7rem;top:.4rem;bottom:.4rem;width:3px;background:var(--verde);opacity:.35;border-radius:2px;
+  }
+  .hito{position:relative;margin-bottom:2.2rem}
+  .hito::before{
+    content:"";position:absolute;left:-2.05rem;top:.55rem;width:16px;height:16px;border-radius:50%;
+    background:var(--fondo);border:4px solid var(--verde);
+  }
+  .hito .anio{
+    font-family:"Segoe UI",Roboto,Arial,sans-serif;font-weight:700;color:var(--rojo);
+    letter-spacing:.08em;font-size:.85rem;text-transform:uppercase;
+  }
+  .hito h3{margin:.1rem 0 .7rem;font-size:1.45rem;color:var(--negro)}
+  .hito .cuerpo{
+    background:var(--tarjeta);border:1px solid var(--borde);border-radius:10px;padding:1.2rem 1.4rem;
+    box-shadow:0 2px 10px rgba(0,0,0,.04);
+  }
+  .hito .cuerpo p{margin:.7rem 0}
+  .hito .cuerpo p:first-child{margin-top:0}
+  .hito .cuerpo p:last-child{margin-bottom:0}
+
+  /* Secciones */
+  h2.titulo{
+    font-size:1.7rem;color:var(--verde-osc);border-bottom:3px solid var(--verde);
+    padding-bottom:.4rem;margin-bottom:1.4rem;
+  }
+  .reflexion p{margin:1rem 0}
+  .cita{
+    background:var(--verde-cl);border-radius:10px;padding:1rem 1.3rem;border-left:5px solid var(--verde);margin:1.2rem 0;
+  }
+  .cierre{
+    margin-top:2.2rem;text-align:center;font-size:1.3rem;font-style:italic;color:var(--verde-osc);
+    padding:1.6rem 1rem;border-top:1px solid var(--borde);border-bottom:1px solid var(--borde);
+  }
+
+  footer{background:var(--negro);color:#bdbdbd;text-align:center;padding:1.6rem 1rem;font-size:.9rem;font-family:"Segoe UI",Arial,sans-serif}
+  footer strong{color:#fff}
+
+  @media (max-width:560px){
+    .linea{padding-left:1.7rem}
+    .hito::before{left:-1.6rem}
+    .linea::before{left:.45rem}
+    body{font-size:1rem}
+  }
+  @media print{
+    nav,button.escuchar{display:none}
+    header{background:#fff;color:#000}
+    header p{color:#000}
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Secciones">
+  <a href="#presentacion">Presentación</a>
+  <a href="#y2023">2023</a>
+  <a href="#y2024">2024</a>
+  <a href="#y2025">2025</a>
+  <a href="#y2026">2026</a>
+  <a href="#reflexion">Reflexión final</a>
+</nav>
+
+<header>
+  <span class="etiqueta">Cohorte 2023-2026</span>
+  <h1>Mi trayectoria formativa</h1>
+  <p>Profesorado de Educación Secundaria en Lengua y Literatura</p>
+  <p>Escuela Normal Superior "República del Paraguay"</p>
+  <p class="estudiante">Estudiante: Ramírez Elizabeth</p>
+  <span class="acento"></span>
+</header>
+
+<main>
+
+  <section id="presentacion">
+    <div class="eli">
+      <h2>Presenta: Eli, la humana digital</h2>
+      <p>Eli viste el uniforme de la Escuela Normal Superior "República del Paraguay": blazer negro, camisa blanca, pantalón de vestir negro, zapatos negros de taco alto, corbatín verde y pin institucional. Es de tez blanca, alta, de contextura media, con cabello castaño oscuro, ojos delineados en negro y labios rojos. Habla, pestañea, camina y mueve los brazos.</p>
+      <p class="saludo" id="saludo">Muy buenas tardes. Soy Ramírez Elizabeth, alumna del Profesorado de Educación Secundaria en Lengua y Literatura.</p>
+      <button class="escuchar" id="btnEscuchar" aria-pressed="false">▶ Escuchar la trayectoria</button>
+    </div>
+  </section>
+
+  <section id="trayectoria">
+    <h2 class="titulo">Recorrido por año</h2>
+    <div class="linea">
+
+      <article class="hito" id="y2023">
+        <span class="anio">Primer año · 2023</span>
+        <h3>El primer acercamiento a la realidad educativa</h3>
+        <div class="cuerpo">
+          <p>En el año 2023 inicié mi formación como futura profesora de Educación Secundaria en Lengua y Literatura, con numerosas expectativas, inquietudes y deseos de adquirir nuevos conocimientos.</p>
+          <p>Mi primer acercamiento al campo de la práctica docente estuvo centrado fundamentalmente en la observación institucional. Esta experiencia me permitió conocer la organización, el funcionamiento y el organigrama de las instituciones educativas del nivel secundario, así como comprender la importancia de los diferentes actores que integran la comunidad educativa.</p>
+          <p>Durante esta primera etapa, comencé a reconocer que la tarea docente no se circunscribe exclusivamente al espacio áulico, sino que se desarrolla dentro de un contexto institucional que condiciona y orienta las prácticas educativas.</p>
+          <p>Este primer acercamiento constituyó el punto de partida de un proceso de formación en el que progresivamente fui construyendo una mirada pedagógica sobre la realidad escolar.</p>
+        </div>
+      </article>
+
+      <article class="hito" id="y2024">
+        <span class="anio">Segundo año · 2024</span>
+        <h3>Los primeros desafíos de la intervención áulica</h3>
+        <div class="cuerpo">
+          <p>Durante el segundo año de formación, transité de la observación institucional hacia mis primeras experiencias de intervención áulica mediante el desarrollo de micro-clases.</p>
+          <p>Una de estas experiencias se llevó a cabo en sexto año de la E.P.E.S. N.º 27 «Raúl Scalabrini Ortiz», junto con otras compañeras. Esta instancia representó mi primer acercamiento a los estudiantes desde el rol de enseñante y me permitió comenzar a construir vínculos pedagógicos.</p>
+          <p>Asimismo, tuve la oportunidad de desarrollar una clase junto con una compañera pedagógica en el nivel superior, con estudiantes del Profesorado de Educación Primaria (PEP), bajo el acompañamiento del profesor Hugo Pérez. En dicha oportunidad, abordamos el microrrelato a partir de la producción literaria del autor formoseño Sandro Centurión.</p>
+          <p>Ambas experiencias fueron particularmente enriquecedoras, puesto que me permitieron intervenir en dos niveles educativos con destinatarios, características, necesidades y propósitos formativos diferentes.</p>
+          <p>Este recorrido me permitió comprender la importancia de la contextualización de la enseñanza, la adecuación de las estrategias didácticas y el reconocimiento de las particularidades de cada grupo.</p>
+        </div>
+      </article>
+
+      <article class="hito" id="y2025">
+        <span class="anio">Tercer año · 2025</span>
+        <h3>La consolidación de las primeras experiencias de enseñanza</h3>
+        <div class="cuerpo">
+          <p>En tercer año, asumí una mayor responsabilidad en el ejercicio de la práctica docente mediante el desarrollo de intervenciones áulicas más prolongadas.</p>
+          <p>Dicté cinco clases en sexto año del Ciclo Orientado de la E.P.E.S. N.º 51 de Comercio “José Gervasio Artigas” y cinco clases en segundo año del Ciclo Básico de la E.P.E.S. N.º 52 Centro Polivalente de Arte “Prof. Monona Donkin”.</p>
+          <p>Estas experiencias me permitieron profundizar en la planificación didáctica, la selección de contenidos disciplinares, la organización de los tiempos y la implementación de estrategias de enseñanza acordes con las características de los destinatarios.</p>
+          <p>El trabajo con estudiantes de diferentes edades y ciclos educativos, así como el abordaje de contenidos con distintos grados de complejidad conceptual, contribuyó al fortalecimiento de mis saberes pedagógicos, disciplinares y didácticos.</p>
+          <p>Durante esta etapa, fui adquiriendo mayor seguridad y autonomía en la toma de decisiones, comprendiendo que enseñar implica reconocer la diversidad de los contextos áulicos y reflexionar permanentemente sobre las propias intervenciones.</p>
+        </div>
+      </article>
+
+      <article class="hito" id="y2026">
+        <span class="anio">Cuarto año · 2026</span>
+        <h3>La residencia y la construcción de mi identidad docente</h3>
+        <div class="cuerpo">
+          <p>En cuarto año, transité la instancia de Práctica IV y Residencias en la Escuela Normal Superior “República del Paraguay”.</p>
+          <p>Desarrollé una secuencia didáctica de diez clases en primer año “D” del Ciclo Básico, turno tarde, bajo el acompañamiento de la profesora Alicia Cano, y otra secuencia de diez clases en sexto año “A” del Ciclo Orientado, turno mañana, bajo el acompañamiento de la profesora Livia Liz Linares.</p>
+          <p>En primer año, abordé los mitos clásicos mediante diversas estrategias didácticas de carácter lúdico, propuestas de comprensión lectora, actividades colaborativas y la elaboración de un lapbook como producción final integradora.</p>
+          <p>En sexto año, trabajé con textos académicos y funcionales, mediante propuestas de lectura, escritura y oralidad que culminaron con la producción de videocurrículums.</p>
+          <p>Esta última etapa me permitió articular los conocimientos adquiridos durante los cuatro años de formación con la realidad del aula, asumir mayores responsabilidades pedagógicas y fortalecer mi autonomía profesional.</p>
+          <p>Asimismo, profundicé en la transposición didáctica, la evaluación formativa, la retroalimentación, la diversificación de las estrategias de enseñanza y la construcción de vínculos pedagógicos sustentados en el respeto, la empatía y la escucha activa.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="reflexion" class="reflexion">
+    <h2 class="titulo">Reflexión final sobre mi trayectoria formativa</h2>
+
+    <p>Al recuperar las experiencias transitadas durante estos cuatro años, puedo reconocer una evolución progresiva en la construcción de mi rol docente.</p>
+    <p>Desde las primeras observaciones institucionales, pasando por las micro-clases y las intervenciones áulicas, hasta llegar a la residencia, cada instancia contribuyó significativamente a mi formación personal y profesional.</p>
+    <p>A lo largo de este recorrido, debí afrontar diversos desafíos, particularmente en la elaboración de las planificaciones didácticas, la búsqueda y selección de bibliografía pertinente, la rigurosidad conceptual de los contenidos y la adecuación de las estrategias de enseñanza a las características de cada grupo. Estas experiencias me permitieron adquirir progresivamente mayor seguridad, autonomía y responsabilidad en la toma de decisiones pedagógicas.</p>
+
+    <div class="cita">
+      <p>Este recorrido puede vincularse con los aportes de Alicia Camilloni (2007), quien destaca la importancia de la coherencia entre los componentes de la programación didáctica y concibe la planificación como una hipótesis de trabajo que se comprueba y valida en la práctica.</p>
+      <p>Asimismo, recupero los aportes de Anijovich Rebeca y Mora Silvia (2009), quienes reconocen en las estrategias de enseñanza una dimensión reflexiva y una dimensión de la acción. Desde esta perspectiva, mi trayectoria me permitió comprender que la formación docente implica un proceso permanente de planificación, intervención, evaluación y reflexión sobre la propia práctica.</p>
+    </div>
+
+    <p>En este proceso, también fue fundamental reconocer la importancia del marco normativo que orienta las prácticas educativas en el contexto formoseño, particularmente la Resolución Provincial N.º 314/12, referida al enfoque de desarrollo de capacidades y escolarización plena, y la Resolución Provincial N.º 536/19, vinculada con el desarrollo de capacidades socioafectivas y espirituales. Estos lineamientos me permitieron comprender que la enseñanza debe atender a la formación integral de los estudiantes, contemplando tanto la apropiación de los saberes disciplinares como el desarrollo de capacidades y la dimensión socioafectiva.</p>
+    <p>Por otra parte, la incorporación de la inteligencia artificial como herramienta complementaria favoreció el enriquecimiento de mis propuestas de enseñanza, especialmente mediante el diseño de recursos didácticos de carácter lúdico y visual y la búsqueda de información. Esta experiencia también me permitió reconocer la necesidad de desarrollar competencias digitales y utilizar las nuevas tecnologías desde una perspectiva crítica, responsable y pedagógicamente significativa.</p>
+    <p>También reconozco que este crecimiento no fue exclusivamente individual, sino colectivo, gracias al acompañamiento de mis docentes formadores y al apoyo de mis compañeras.</p>
+    <p>En este sentido, las orientaciones, sugerencias y devoluciones de la profesora Beatriz Mendoza, el profesor Ariel Cáceres, la profesora Emilia Claes y los docentes coformadores que me acompañaron durante las distintas etapas de la práctica constituyeron aportes significativos para mi crecimiento profesional. Asimismo, valoro profundamente el acompañamiento de mis compañeras, con quienes compartí experiencias, inquietudes, desafíos y aprendizajes.</p>
+    <p>La construcción de mi identidad docente implicó, además, aprender a gestionar mis emociones, fortalecer mis vínculos interpersonales, afrontar nuevos desafíos y reconocer mis propias fortalezas y limitaciones.</p>
+    <p>En este sentido, comprendí que la inteligencia emocional constituye un aspecto fundamental de la profesión docente, tanto para la gestión de las propias emociones como para la construcción de vínculos pedagógicos sustentados en la empatía, la escucha activa, la confianza y el respeto recíproco.</p>
+    <p>Hoy comprendo que finalizar esta etapa de formación no significa haber concluido mi aprendizaje, sino iniciar una nueva etapa de crecimiento profesional, sustentada en el compromiso, la responsabilidad, la humildad intelectual y la formación continua.</p>
+    <p>Considero que, independientemente de los años de experiencia, el docente debe mantener una actitud de apertura hacia nuevos aprendizajes, tener la humildad necesaria para reconocer sus errores y limitaciones, y asumirlos como oportunidades para enriquecer y transformar sus prácticas.</p>
+
+    <p class="cierre">Porque ser docente no significa solamente enseñar, sino también estar dispuesto a aprender a lo largo de toda la trayectoria profesional.</p>
+  </section>
+
+</main>
+
+<footer>
+  <strong>Ramírez Elizabeth</strong> · Profesorado de Educación Secundaria en Lengua y Literatura · Cohorte 2023-2026<br>
+  Escuela Normal Superior "República del Paraguay" · Formosa
+</footer>
+
+<script>
+  // Lectura en voz alta (Web Speech API del navegador, sin servidores externos)
+  (function () {
+    var btn = document.getElementById('btnEscuchar');
+    if (!('speechSynthesis' in window)) {
+      btn.style.display = 'none';
+      return;
+    }
+    var leyendo = false;
+
+    function textoACeer() {
+      var partes = [document.getElementById('saludo').innerText];
+      document.querySelectorAll('.hito, #reflexion').forEach(function (el) {
+        partes.push(el.innerText);
+      });
+      return partes.join('\n\n');
+    }
+
+    function detener() {
+      window.speechSynthesis.cancel();
+      leyendo = false;
+      btn.textContent = '▶ Escuchar la trayectoria';
+      btn.setAttribute('aria-pressed', 'false');
+    }
+
+    btn.addEventListener('click', function () {
+      if (leyendo) { detener(); return; }
+      var u = new SpeechSynthesisUtterance(textoACeer());
+      u.lang = 'es-AR';
+      u.rate = 0.95;
+      var voces = window.speechSynthesis.getVoices().filter(function (v) {
+        return v.lang && v.lang.toLowerCase().indexOf('es') === 0;
+      });
+      if (voces.length) {
+        var f = voces.find(function (v) { return /AR|MX|ES|US/i.test(v.lang); });
+        u.voice = f || voces[0];
+      }
+      u.onend = detener;
+      u.onerror = detener;
+      window.speechSynthesis.speak(u);
+      leyendo = true;
+      btn.textContent = '■ Detener lectura';
+      btn.setAttribute('aria-pressed', 'true');
+    });
+  })();
+</script>
+</body>
+</html>
